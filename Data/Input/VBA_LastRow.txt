@@ -1,0 +1,18 @@
+Sub LastRow()
+    Dim LastRow As Long
+    Dim ws As Worksheet
+    Dim LastCell As Range
+
+    ' 작업하려는 워크시트를 지정합니다.
+    Set ws = ThisWorkbook.Sheets("종합")
+
+    ' B열의 마지막 행 번호를 찾습니다.
+    LastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
+
+    ' B열의 마지막 셀을 찾습니다.
+    Set LastCell = ws.Cells(LastRow, "B")
+    LastCell.HorizontalAlignment = xlCenter
+    LastCell.Font.Bold = True
+    LastCell.Font.Size = 36
+    LastCell.Interior.Color = RGB(235, 241, 222) 
+End Sub

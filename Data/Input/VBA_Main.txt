@@ -1,0 +1,105 @@
+Sub Main()
+    Dim ws As Worksheet
+
+    ' 각 시트에 대한 반복 작업
+    For Each ws In ThisWorkbook.Sheets
+        ws.Activate ' 현재 시트를 활성화합니다.
+        ' 이하 스타일 설정 코드
+        ws.Range("A1:E1").Select
+        With Selection.Font
+            .Name = "Calibri"
+            .Size = 14
+            .Strikethrough = False
+            .Superscript = False
+            .Subscript = False
+            .OutlineFont = False
+            .Shadow = False
+            .Underline = xlUnderlineStyleNone
+            .Color = -16777216
+            .TintAndShade = 0
+            .ThemeFont = xlThemeFontNone
+        End With
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent3
+        .TintAndShade = 0.799981688894314
+        .PatternTintAndShade = 0
+    End With
+
+    Selection.Font.Bold = True
+    ws.Columns("A:E").Select
+    ws.Columns("A:E").EntireColumn.AutoFit
+    ws.Rows("1:1").Select
+    Selection.RowHeight = 20.5
+    ws.Columns("E:E").Select
+    Selection.NumberFormatLocal = "#,##0_ "
+
+    ws.Range("A1:E1").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+
+    ws.Range("A1:E1").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    ws.Columns("B:B").ColumnWidth = 5.15
+    ws.Columns("A:A").ColumnWidth = 7
+    ws.Columns("A:B").Select
+    With Selection
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+
+    Next ws
+End Sub
