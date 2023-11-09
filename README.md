@@ -5,8 +5,9 @@
 ### REFrameWork Template ###
 **Robotic Enterprise Framework**
 * Keeps external settings in *Config.xlsx* file and Orchestrator assets
-사용자가 원하는 조회시작연월, 조회종료연월의 값을 받아서 데이터추출을 하기 위해
-Data\Config.xlsx파일에 StartYYMM(조회시작연월), EndYYMM(조회종료연월) setting
+
+* 사용자가 원하는 조회시작연월, 조회종료연월의 값을 받아서 데이터추출을 하기 위해
+  Data\Config.xlsx파일에 StartYYMM(조회시작연월), EndYYMM(조회종료연월) setting
 *주의: Invoke VBA가 작동하기 위해서는 사전에 엑셀 환경설정필요(매크로활성화, 보안설정 등)
 
 작업시작 전,  QueItem을 사용하지 않을 것이므로
