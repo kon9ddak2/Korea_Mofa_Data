@@ -1,6 +1,6 @@
 ### Documentation is included in the Documentation folder ###
-외교부 월별 세출집행현황 데이터를 추출하여 결과 파일 작성
-외교부 홈페이지(https://www.mofa.go.kr/) - 정보공개 – 세입세출예산운용상황 에서 DataTable을 추출
+- 외교부 월별 세출집행현황 데이터를 추출하여 결과 파일 작성
+- 외교부 홈페이지(https://www.mofa.go.kr/)>정보공개>세입세출예산운용상황 에서 DataTable을 추출
 
 ### REFrameWork Template ###
 **Robotic Enterprise Framework**
